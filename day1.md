@@ -9,14 +9,14 @@
 1. 官网下载地址：[下载 | Node.js](https://nodejs.org/zh-cn/download)
 2. Node.js默认安装目录为 *C:\Program Files\nodejs\*, 你也可以修改目录
 
-记住，一路都是 next（下一步）
+   记住，一路都是 next（下一步）
 
-1. 最后install，等安装好
-2. 在命令行里： node -v，看是否会出现一个版本号，出现了说明安装成功！
-3. 最后还要检查一下**环境变量**是否配置：我的电脑（此电脑）右键，打开属性
-4. ![点击高级系统设置](https://image-static.segmentfault.com/270/685/2706858956-595dd7b00b5af_articlex)
-5. ![点击环境变量](https://image-static.segmentfault.com/330/053/3300535810-595dd8322eba9_articlex)
-6. ![变量值加入node安装地址](https://image-static.segmentfault.com/198/357/198357956-595dd8541cad0_articlex)
+   1. 最后install，等安装好
+3. 在命令行里： node -v，看是否会出现一个版本号，出现了说明安装成功！
+4. 最后还要检查一下**环境变量**是否配置：我的电脑（此电脑）右键，打开属性
+5. ![点击高级系统设置](https://image-static.segmentfault.com/270/685/2706858956-595dd7b00b5af_articlex)
+6. ![点击环境变量](https://image-static.segmentfault.com/330/053/3300535810-595dd8322eba9_articlex)
+7. ![变量值加入node安装地址](https://image-static.segmentfault.com/198/357/198357956-595dd8541cad0_articlex)
 
 
 
