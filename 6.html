@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>click<tton>
+<script>
+    let btn = document.querySelector("button");
+    let handler = function (event) {
+        switch (event.type) {
+            case "click":
+                console.log("Clicked");
+                break;
+            case "mouseover":
+                event.target.style.backgroundColor = "red";
+                break;
+            case "mouseout":
+                event.target.style.backgroundColor = "";
+                break;
+        }
+    };
+
+    btn.onclick = handler;
+    btn.onmouseover = handler;
+    btn.onmouseover = handler;
+</script>
+    
+</body>
+</html>

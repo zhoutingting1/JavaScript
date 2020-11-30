@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">test</div>
+    <script>
+
+        const box = document.querySelector('#box')
+
+        //捕获阶段
+        window.addEventListener('click', () => {
+            console.log(`==> window 捕获阶段`)
+        },true)
+
+        document.addEventListener('click', () => {
+            console.log(`==> document捕获阶段`)
+        },true)
+
+        document.documentElement.addEventListener('click', () => {
+            console.log(`==> html 捕获阶段`)
+        },true)
+        document.body.addEventListener('click', () => {
+            console.log(`==> body 捕获阶段`)
+        },true)
+
+        box.addEventListener('click',() => {
+            console.log(`==> box 捕获阶段`)
+        },true)
+      
+
+        //冒泡阶段
+        window.addEventListener('click', () => {
+            console.log(`==> window 冒泡阶段`)
+        },false)
+
+        document.addEventListener('click', () => {
+            console.log(`==> document冒泡阶段`)
+        },false)
+
+        document.documentElement.addEventListener('click', () => {
+            console.log(`==> html 冒泡阶段`)
+        },false)
+        document.body.addEventListener('click', () => {
+            console.log(`==> body 冒泡阶段`)
+        },false)
+
+        box.addEventListener('click',() => {
+            console.log(`==> box 冒泡阶段`)
+        },false)
+
+    </script>
+</body>
+</html>

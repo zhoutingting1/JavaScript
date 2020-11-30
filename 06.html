@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <p id="para">test</p>
+    </div>
+    <a href="Https://www.microsoft.com">导航到微软公司的网站</a>
+    <script>
+        const box = document.querySelector("#box")
+        const para = document.querySelector("#para")
+
+        const callback = (e) =>{
+            console.clear()
+            console.log(`标记名: ${e.currentTarget.tagName},传播阶段:${e.eventPhase}`);
+
+        }
+
+        box.addEventListener('click',callback,true)
+        //para.addEventListener('click',callback,true)
+        box.addEventListener('click',callback,false)
+        para.addEventListener('click',callback,false)
+
+        const link = document.querySelector('#link')
+        link.addEventListener('click',(e) => {
+            e.preventDefault()
+            console.log('you click me ');
+            
+        })
+    </script>
+</body>
+</html>
