@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p1{
+            border: 1px solid red;
+        }
+        .p1{
+            background-color:gray ;
+        }
+        .p3{
+            display: none; 
+            /*原来的位置屏蔽*/
+            visibility: hidden;
+            /*原来的位置保留*/
+        }
+    </style>
+</head>
+<body>
+    <!-- 原生属性
+    <div id="myDiv" class="test" style="border: 1px solid red;"></div>
+    <img src="" alt="">
+    <label for="useName">姓名：</label><input type="text" name="useName" id="htmlFor">
+    <script>
+        const oDiv = document.querySelector('div')
+        console.log(oDiv.id)
+        console.log(oDiv.className);
+        const oLabel = document.querySelector('label')
+        console.log(oLabel.htmlFor);
+        console.log(oDiv.style);
+    </script> -->
+    <!-- className -->
+    <h1 class="p1 p2">This is heading</h1>
+    <button id="myButton">Click</button>
+    <script>
+        const heading = document.querySelector('h1')
+        const myButton = document.querySelector('#myButton')
+        //console.log(heading.className);
+        //heading.className += ' p3'
+        //console.log(heading.className);
+        //classList   形成一个列表对象
+        console.log(heading.classList)
+        //heading.classList.add('p3')
+        heading.classList.remove('p2')
+        myButton.addEventListener('Click',() =>{
+            myButton.classList
+        })
+
+    </script>
+
+    <!--自定义属性-->
+    <div id="myDiv1" ddd = "user" eee ="name">test</div>
+    <script>
+        const oDiv1 = document.querySelector('#myDiv1')
+        let ddd = oDiv1.getAttribute('ddd') //自定义
+        let id = oDiv1.getAttribute('id')   //原生
+        console.log(ddd) //user
+        console.log(id) //myDiv
+        oDiv1.setAttribute('eee','ztt')
+        let eee = oDiv1.getAttribute('eee')
+        console.log(eee)
+    </script>
+
+
+    <!-- HTML 自定义数据属性 -->
+    <!-- <div id="myDiv2" data-username="ztt" data-title="teacher">test2</div>
+    <script>
+        const myDiv2 = document.querySelector('#myDiv2')
+        console.log(myDiv2.dataSet)
+        console.log(myDiv2.dataSet.username)
+        myDiv2.dataSet.title = 'student'
+        console.log(myDiv2.dataSet.title)
+    </script> -->
+</body>
+</html>

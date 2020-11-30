@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>Java</li>
+        <li>JavaScript</li>
+    </ul>
+    <input type="text" id="txtItem">
+    <button id="btnAdd">+</button>
+    <button id="btnDel">-</button>
+    <script>
+        const txtItem = document.querySelector('#txtItem').value
+        const oList = document.querySelector('ul')
+        document.querySelector('#btnAdd').addEventListener('click',() => {
+            let strItem = document.querySelector('#txtItem').value
+            let oE = document.createElement('li')
+            oE.textContent = txtItem
+            oList.appendChild(oE)
+            document.querySelector('#txtItem').value = ''
+        })
+        document.querySelector('#btnDel').addEventListener('click',() => {
+            document.querySelector('#btnDel').addEventListener('click',() => {
+                document.querySelector('#txtItem').value = ''
+            })
+        })
+
+    </script>
+</body>
+</html>
