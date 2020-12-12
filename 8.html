@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>键盘事件</title>
+</head>
+<body>
+    <form action="#">
+        <input type="text" id="txtUserName" />
+    </form>
+    <script>
+        const oUserName = document.querySelector('#txtUserName')
+        oUserName.addEventListener('keydown',(e)=>{
+            // console.log('-->keydown');
+        })
+        oUserName.addEventListener('keypress',(e)=>{
+            // console.log('-->keypress');
+            // console.log(`keypress-keycode${e.keycode}`);
+            // console.log(`keypress-charcode${e.charcode}`);
+            console.log(`keypress-key:${e.key}`);
+            console.log(`keypress-code:${e.code}`);
+            
+        })
+        oUserName.addEventListener('keyup',(e)=>{
+            // console.log('-->keyup');
+            // console.log(`keyup${String.fromCharCode(e.keycode)}`);
+        })
+     
+        oUserName.addEventListener('input',(e)=>{
+            // console.log('-->input');
+           // console.log(`input:${e.keycode}`);
+            
+        })
+    </script>
+    
+</body>
+</html>

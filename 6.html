@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上下文菜单示例</title>
+    <style>
+        div{
+            border: 1px solid red;
+
+        }
+
+        #menu{
+            visibility: hidden;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    </div>
+    <ul id="menu">
+        <li>增加</li>
+        <li>修改</li>
+        <li>删除</li>
+    </ul>
+
+    <script>
+        window.addEventListener('load',(e)=>{
+            const menu = document.querySelector('#menu')
+            const div = document.querySelector('div')
+
+            div.addEventListener('contextmenu',(e)=>{
+                e.preventDefault()
+
+                menu.style.top = e.clientY + 'px'
+                menu.style.left = e.clientX + 'px'
+                menu.style.visibility = 'visible'
+            })
+            document.addEventListener('click',(e)=>{
+                menu.style.visibility = 'hidden'
+            })
+        })
+    </script>
+    
+</body>
+</html>
